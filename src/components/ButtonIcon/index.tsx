@@ -1,17 +1,18 @@
 import React from "react";
+import { TouchableOpacityProps } from "react-native";
 
-import { ButtonImage, Container, Content, Label } from "./styles";
+import { ButtonImage, Container, ButtonContainer, Label } from "./styles";
 
-interface IButton {
+interface IButton extends TouchableOpacityProps {
   title: string;
 }
 
-const ButtonIcon: React.FC<IButton> = ({ title }) => {
+const ButtonIcon: React.FC<IButton> = ({ title, ...rest }) => {
   return (
-    <Container>
-      <Content>
+    <Container onPress={() => {}}>
+      <ButtonContainer>
         <ButtonImage />
-      </Content>
+      </ButtonContainer>
       <Label>{title}</Label>
     </Container>
   );

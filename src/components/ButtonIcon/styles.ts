@@ -21,7 +21,7 @@ export const ButtonImage = styled.Image.attrs({
   width: 24px;
   height: 18px;
 `;
-export const Content = styled.View`
+export const ButtonContainer = styled.View`
   width: 56px;
   height: 56px;
   justify-content: center;
