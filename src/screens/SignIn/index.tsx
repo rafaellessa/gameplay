@@ -1,5 +1,6 @@
 import React from "react";
 import ButtonIcon from "../../components/ButtonIcon";
+import { useNavigation } from "@react-navigation/native";
 
 import {
   Container,
@@ -11,6 +12,8 @@ import {
 } from "./styles";
 
 const SignIn: React.FC = () => {
+  const navigate = useNavigation();
+
   return (
     <Container>
       <Status />
@@ -22,7 +25,13 @@ const SignIn: React.FC = () => {
         <SubTitle>
           Crie grupos para jogar seus games {"\n"} favoritos com seus amigos
         </SubTitle>
-        <ButtonIcon title="Entrar com Discord" />
+        <ButtonIcon
+          onPress={() => {
+            navigate.navigate("Home", {});
+          }}
+          title="Entrar com Discord"
+          activeOpacity={0.7}
+        />
       </Content>
     </Container>
   );

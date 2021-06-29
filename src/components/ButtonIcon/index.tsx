@@ -9,7 +9,7 @@ interface IButton extends TouchableOpacityProps {
 
 const ButtonIcon: React.FC<IButton> = ({ title, ...rest }) => {
   return (
-    <Container onPress={() => {}}>
+    <Container {...rest}>
       <ButtonContainer>
         <ButtonImage />
       </ButtonContainer>

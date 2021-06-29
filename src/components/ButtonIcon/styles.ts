@@ -11,7 +11,7 @@ export const Container = styled.TouchableOpacity`
 `;
 export const Label = styled.Text`
   flex: 1;
-  color: ${theme.colors.reading};
+  color: ${theme.colors.heading};
   font-size: 15px;
   text-align: center;
 `;
